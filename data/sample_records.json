@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Akhil",
+    "category": "Science",
+    "marks": 85
+  },
+  {
+    "id": 2,
+    "name": "Rahul",
+    "category": "Commerce",
+    "marks": 76
+  },
+  {
+    "id": 3,
+    "name": "Ananya",
+    "category": "Science",
+    "marks": 92
+  },
+  {
+    "id": 4,
+    "name": "Priya",
+    "category": "Arts",
+    "marks": 88
+  },
+  {
+    "id": 5,
+    "name": "Kiran",
+    "category": "Science",
+    "marks": 91
+  }
+]

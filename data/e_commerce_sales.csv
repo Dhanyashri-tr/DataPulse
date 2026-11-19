@@ -1,0 +1,21 @@
+order_id,customer,product,category,quantity,unit_price,region,payment_status
+ORD001,Aarav,Laptop,Electronics,2,55000,South,Completed
+ORD002,Diya,Smartphone,Electronics,1,25000,West,Completed
+ORD003,Rohan,Office Chair,Furniture,3,4500,North,Pending
+ORD004,,Wireless Mouse,Accessories,2,800,East,Completed
+ORD005,Meera,Keyboard,Accessories,-2,1200,South,Completed
+ORD006,Kiran,Monitor,Electronics,1,-15000,West,Completed
+ORD007,Ananya,Study Table,Furniture,1,6500,North,Pending
+ORD008,Rahul,Headphones,Electronics,abc,2500,East,Completed
+ORD009,Diya,Smartphone,Electronics,1,25000,West,Completed
+ORD010,Sanjay,Power Bank,Accessories,2,,South,Completed
+ORD011,Priya,Bookshelf,Furniture,1,7500,,Cancelled
+ORD012,Arjun,Tablet,Electronics,0,18000,North,Completed
+ORD013,Kavya,Desk Lamp,Accessories,2,900,East,Unknown
+ORD014,Manoj,USB Cable,Accessories,3,300,South,Completed
+ORD015,Neha,Laptop,Electronics,1,72000,West,Completed
+ORD016,Varun,Smartwatch,Electronics,2,-5000,North,Pending
+ORD017,Divya,Office Chair,Furniture,1,4500,East,Completed
+ORD018,Rahul,Headphones,Electronics,2,2500,South,Completed
+ORD019,Anil,Keyboard,Accessories,1,1200,West,Completed
+ORD020, ,Monitor,Electronics,1,15000,North,Completed

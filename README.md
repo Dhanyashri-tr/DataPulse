@@ -1,65 +1,29 @@
 # DataPulse – Smart Data Intelligence Platform
 
-A Python-based data analysis application that transforms raw datasets into meaningful insights through automated data validation, statistical analysis, interactive visualizations and professional report generation.
+DataPulse is a Python-based data analytics application that simplifies dataset analysis through automated data validation, statistical analysis, interactive visualizations, and professional report generation.
 
-## About the Project
+It allows users to upload CSV and JSON datasets, identify data quality issues, explore records, generate insights, and export analysis reports in multiple formats.
 
-DataPulse is an interactive analytics platform developed using Python and Streamlit. It allows users to upload CSV and JSON datasets, validate records, identify data quality issues, explore statistical summaries and generate downloadable reports.
+## Features
 
-The application is designed to simplify data analysis through an intuitive dashboard without requiring users to write SQL queries or Python scripts.
-
-## Key Features
-
-### 1. Dataset Management
-- Upload CSV and JSON files.
-- Load and preview datasets.
-- Explore records through an interactive interface.
-
-### 2. Data Validation
-- Detect missing values.
-- Identify duplicate records and IDs.
-- Detect invalid numerical values.
-- Validate quantities and prices.
-- Identify invalid payment statuses.
-- Separate valid and invalid records.
-- Generate detailed validation issue reports.
-
-### 3. Data Analytics
-- Calculate average, minimum, maximum and median.
-- Analyze numerical columns.
-- Generate categorical frequency distributions.
-- Calculate category percentages.
-- Generate automatic analytical insights.
-
-### 4. Interactive Visualizations
-- Numerical distribution histograms.
-- Box plot visualizations.
-- Statistical summary cards.
-- Interactive data exploration.
-
-### 5. Professional Report Generation
-
-Generate and download eight report formats:
-
-| Report | Format |
-|---|---|
-| Analysis Report | TXT |
-| Analysis Report | JSON |
-| Professional Report | PDF |
-| Numerical Summary | CSV |
-| Category Summary | CSV |
-| Valid Records | CSV |
-| Invalid Records | CSV |
-| Validation Issues | CSV |
+- **CSV & JSON Upload:** Import datasets in CSV and JSON formats.
+- **Data Explorer:** View, inspect, and explore uploaded records.
+- **Data Validation:** Detect missing values, duplicate records, invalid numerical values, and other data quality issues.
+- **Statistical Analysis:** Generate numerical and categorical summaries.
+- **Interactive Visualizations:** Explore data using interactive Plotly charts, including histograms and box plots.
+- **Automatic Insights:** Generate useful observations from dataset analysis.
+- **Report Generation:** Export analysis results in PDF, TXT, JSON, and CSV formats.
+- **User-Friendly Interface:** Simple and interactive dashboard built with Streamlit.
 
 ## Technology Stack
 
 | Technology | Purpose |
 |---|---|
 | Python | Core programming language |
-| Streamlit | Web application framework |
+| Streamlit | Interactive web application |
 | Pandas | Data processing and analysis |
-| Plotly | Interactive visualizations |
+| Matplotlib | Data visualization |
+| Plotly | Interactive charts |
 | ReportLab | PDF report generation |
 | JSON | Structured data handling |
 | VS Code | Development environment |
@@ -67,132 +31,123 @@ Generate and download eight report formats:
 ## Project Structure
 
 ```text
-record_analyzer/
+DataPulse/
 │
-├── app.py
-├── validator.py
-├── analyzer.py
-├── report_generator.py
+├── .streamlit/
+│   └── config.toml
 │
 ├── data/
+│   ├── e_commerce_sales.csv
 │   ├── sample_records.csv
-│   └── ecommerce_sales.csv
+│   └── sample_records.json
 │
-├── reports/
-│   └── Generated reports
-│
-├── tests/
-│
-├── test_validator.py
-├── test_analyzer.py
-├── test_report_generator.py
-├── test_pdf.py
-│
+├── .gitignore
+├── README.md
+├── analyzer.py
+├── app.py
+├── report_generator.py
 ├── requirements.txt
-└── README.md
+├── validator.py
+│
+├── test_analyzer.py
+├── test_pdf.py
+├── test_report_generator.py
+└── test_validator.py
 ```
 
 ## Installation and Setup
 
-### Step 1: Clone the Repository
+### 1. Clone the Repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/Dhanyashri-tr/DataPulse.git
 ```
 
-Alternatively, download the project ZIP and extract it.
+### 2. Navigate to the Project Directory
 
-### Step 2: Open the Project
+```bash
+cd DataPulse
+```
 
-Open the project folder in Visual Studio Code.
-
-### Step 3: Create a Virtual Environment
+### 3. Create a Virtual Environment
 
 ```bash
 python -m venv venv
 ```
 
-### Step 4: Activate the Virtual Environment
+### 4. Activate the Virtual Environment
 
-Windows PowerShell:
+**Windows:**
 
-```powershell
-.\venv\Scripts\Activate.ps1
+```bash
+venv\Scripts\activate
 ```
 
-### Step 5: Install Dependencies
+### 5. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Step 6: Run the Application
+### 6. Run the Application
 
 ```bash
 streamlit run app.py
 ```
 
-The application will open in your browser, usually at:
+The application will open in your default browser.
 
-```text
-http://localhost:8501
-```
+## Usage
 
-## How to Use DataPulse
-
-1. Launch the application.
-2. Select a sample dataset or upload your own CSV/JSON file.
-3. Explore the uploaded dataset.
-4. Navigate to the Data Quality section to inspect validation issues.
-5. Open Analytics to explore statistical summaries and visualizations.
-6. Visit Reports to generate and download analysis reports.
+1. Launch the DataPulse application.
+2. Upload a CSV or JSON dataset.
+3. Explore the uploaded records using the Data Explorer.
+4. Run data quality validation to identify errors and inconsistencies.
+5. View numerical and categorical analysis.
+6. Explore interactive visualizations and automatically generated insights.
+7. Generate and download reports in supported formats.
 
 ## Testing
 
-DataPulse was tested using both clean and intentionally flawed datasets.
+The project includes test scripts for its core functionality:
 
-### Functional Testing Results
+- `test_analyzer.py` – Tests data analysis functionality.
+- `test_validator.py` – Tests data validation.
+- `test_pdf.py` – Tests PDF report generation.
+- `test_report_generator.py` – Tests report generation.
 
-| Test Case | Result |
+Run individual tests using:
+
+```bash
+python test_analyzer.py
+python test_validator.py
+python test_pdf.py
+python test_report_generator.py
+```
+
+## Supported Report Formats
+
+| Format | Description |
 |---|---|
-| Application Launch | Passed |
-| CSV Upload | Passed |
-| JSON Upload | Passed |
-| Data Validation | Passed |
-| Analytics | Passed |
-| Data Explorer | Passed |
-| Report Generation | Passed |
-
-### Validation Testing
-
-A deliberately flawed e-commerce dataset was used to test:
-
-- Missing customer information.
-- Duplicate and invalid records.
-- Negative and zero quantities.
-- Negative prices.
-- Invalid numerical values.
-- Invalid payment statuses.
-
-The validation system successfully identified the tested issues.
+| PDF | Professional analysis report |
+| TXT | Text-based summary |
+| JSON | Structured analysis results |
+| CSV | Downloadable analysis and validation data |
 
 ## Future Enhancements
 
-Potential improvements include:
-
-- Advanced anomaly detection.
-- Additional statistical analysis.
-- Customizable report templates.
-- Database integration.
+- Advanced data visualization.
+- Support for additional file formats.
+- More configurable validation rules.
+- Enhanced analytical insights.
 - Cloud deployment.
-- Machine learning-based data quality predictions.
 
 ## Author
 
 **T R Dhanyashri**
 
-Developed as a Python application project to demonstrate data processing, validation, analytics, visualization and automated reporting.
+GitHub: [Dhanyashri-tr](https://github.com/Dhanyashri-tr)
 
 ## License
 
-This project is available for educational and learning purposes. Add a suitable open-source license if you intend to distribute it publicly.
+This project is open-source. A formal license can be added to define permissions for reuse and distribution.
